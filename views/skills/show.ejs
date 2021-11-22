@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head.ejs') %>
+
+        <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <%- include('../partials/header.ejs') %>
+        <br>
+        <h1>Skill #
+            <%= skill.id %>
+        </h1>
+        <br>
+        <h3>
+            <%= skill.skill %>
+        </h3>
+        <br>
+        <h3>Complete:
+            <%= skill.done ? 'Yes' : 'No' %>
+        </h3>
+        <br>
+        <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>
