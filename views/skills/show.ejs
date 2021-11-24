@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <%- include('../partials/head.ejs') %>
 
@@ -10,6 +7,9 @@
 <body>
     <%- include('../partials/header.ejs') %>
         <br>
+        <form action="/skills/<%= skill.id %>?_method=DELETE" class="delete-form" method="POST">
+            <button type="submit">X</button>
+        </form>
         <h1>Skill #
             <%= skill.id %>
         </h1>
@@ -21,6 +21,7 @@
         <h3>Complete:
             <%= skill.done ? 'Yes' : 'No' %>
         </h3>
+        <a href="/skills/<%= skill.id %>/edit">Edit To-Do</a>
         <br>
         <%- include('../partials/footer.ejs') %>
 </body>
