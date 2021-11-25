@@ -28,7 +28,6 @@ function deleteSkill(req, res) {
 }
 
 function create(req, res) {
-    console.log(req.body);
     req.body.done = false;
     Skill.create(req.body);
     // Do a redirect anytime data is changed
@@ -42,6 +41,8 @@ function newSkill(req, res) {
 function index(req, res) {
     res.render('skills/index', {
         skills: Skill.getAll(),
+        date: req.date,
+        level: req.level
     });
 }
 

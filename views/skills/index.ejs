@@ -7,18 +7,37 @@
 <body>
     <%- include('../partials/header.ejs') %>
         <br>
-        <h1>Skills
+        <h1>My Current Developer Skills
         </h1>
-        <ul>
-            <% skills.forEach(function(skill) { %>
-                <li>
-                    <a href="/skills/ 
+        <h3>as of
+            <%= date %>
+        </h3>
+        <p id="desc">Click a skill to see the description.</p>
+        <div class="row">
+            <table class="table table-bordered">
+                <thead class="head">
+                    <tr>
+                        <th class="head">Skill</th>
+                        <th class="head">Current Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% skills.forEach(function(skill) { %>
+                        <tr>
+                            <td id="skill">
+                                <a href="/skills/ 
                 <%= skill.id %>">
-                        <%= skill.skill %>
-                    </a>
-                </li>
-                <% }); %>
-        </ul>
+                                    <%= skill.skill %>
+                                </a>
+                            </td>
+                            <td id="level">
+                                <%= skill.level %>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+        </div>
         <a href="/skills/new">Add Skill</a>
         <br>
         <%- include('../partials/footer.ejs') %>

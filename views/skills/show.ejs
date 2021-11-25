@@ -15,13 +15,17 @@
         </h1>
         <br>
         <h3>
-            <%= skill.skill %>
+            <%= skill.skill %> : Level
+                <%= skill.level %>
         </h3>
+        <p>
+            <%= skill.description%>
+        </p>
         <br>
         <h3>Complete:
             <%= skill.done ? 'Yes' : 'No' %>
         </h3>
-        <a href="/skills/<%= skill.id %>/edit">Edit To-Do</a>
+        <a href="/skills/<%= skill.id %>/edit">Edit Skill</a>
         <br>
         <%- include('../partials/footer.ejs') %>
 </body>

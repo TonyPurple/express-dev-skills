@@ -1,13 +1,13 @@
 const skills = [
-    { id: 123456, skill: 'Fundamentals of JavaScript, HTML & CSS', done: true },
-    { id: 123457, skill: 'DOM Manipulation & Events', done: true },
-    { id: 123458, skill: 'Structuring a Browser App', done: true },
-    { id: 123459, skill: 'CSS Flexbox, Grid & Responsive Design', done: true },
-    { id: 123460, skill: 'JS Callback Functions, Classes, jQuery, this Keyword, Array Iterator Methods & Playing Audio', done: true },
-    { id: 123461, skill: 'Big O Notation', done: true },
-    { id: 123462, skill: 'Project Deployment to GitHub Pages', done: true },
-    { id: 123463, skill: 'Client-Server: HTTP Communications & REST', done: true },
-    { id: 123464, skill: 'NodeJS & ExpressJS Framework', done: true },
+    { id: 123456, skill: 'HTML', level: '5', done: true, description: 'I have demonstrated ability to use this skill across a variety of applications' },
+    { id: 123457, skill: 'CSS Flexbox/Grid, Responsive Design, Bootstrap', level: '5', done: true, description: 'I have demonstrated ability to use this skill across a variety of applications' },
+    { id: 123458, skill: 'Git & GitHub', level: '4', done: true, description: 'I possess the ability needed for day-to-day Git repository workflow' },
+    { id: 123459, skill: 'JavaScript', level: '4', done: true, description: 'I possess a solid foundation in JavaScript fundamentals' },
+    { id: 123460, skill: 'MongoDB', level: '1', done: true, description: 'I have limited experience with this tool' },
+    { id: 123461, skill: 'Big O Notation', level: '1', done: true, description: 'I have basic understanding of computer science topics' },
+    { id: 123462, skill: 'NodeJS & Express.JS', level: '3', done: true, description: 'I have moderate experience with these frameworks' },
+    { id: 123463, skill: 'React', level: '1', done: true, description: 'I have limited experience with this tool' },
+    { id: 123464, skill: 'Python, Django, PostgreSQL', level: '1', done: true, description: 'I have limited experience with these tools' },
 ];
 
 module.exports = {
