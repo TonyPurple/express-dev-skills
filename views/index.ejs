@@ -1,18 +1,24 @@
-<head>
-    <%- include('./partials/head.ejs') %>
+<%- include('./partials/head.ejs') %>
 
-        <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
 
-<body>
-    <%- include('./partials/header.ejs') %>
-        <br>
-        <p>This is the home page for my Express Developer Skills Lab at General Assembly. To see a list of skills learned, click the above link.</p>
-        <p>Last updated:
-            <%= date %>
-        </p>
-        <br>
-        <%- include('./partials/footer.ejs') %>
-</body>
+    <body>
+        <div class="container">
+            <%- include('./partials/header.ejs') %>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="mb-0">This is the home page for my Express Developer Skills Lab at General Assembly. To see a list of skills learned, click the above link.</p>
+                        <br>
+                        <img src="https://i.imgur.com/BepMO0k.jpg" class="img-fluid rounded card-img-top" title="Full Stack Developer Skills" />
+                        <p>Last updated:
+                            <%= date %>
+                        </p>
+                    </div>
+                    <br>
+                    <%- include('./partials/footer.ejs') %>
+                </div>
+        </div>
+        </div>
+    </body>
 
-</html>
+    </html>

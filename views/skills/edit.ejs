@@ -1,28 +1,26 @@
-<head>
-    <%- include('../partials/head.ejs') %>
+<%- include('../partials/head.ejs') %>
 
-        <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+    <body>
+        <div class="container">
+            <%- include('../partials/header.ejs') %>
+                <h1>Edit Skill</h1>
+                <form class="form-inline" action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+                    <label for="skill">Skill:
+                    <input class="form-control mb-2 mr-sm-2" type="text" name="skill" value="<%= skill.skill %>">
+                </label>
+                    <label for="level">Level:
+                    <input class="form-control mb-2 mr-sm-2" type="number" name="level" value="<%= skill.level %>">
+                </label>
+                    <label for="description">Description:
+                    <input class="form-control mb-2 mr-sm-2" type="text" name="description" value="<%= skill.description %> ">
+                </label>
+                    <label for="done">Project Completed:
+                    <input type="checkbox" name="done" <%=skill.done ? 'checked' : '' %>>
+                </label>
+                    <button type="submit" class="btn btn-primary">Update Skill</button>
+                </form>
+                <%- include('../partials/footer.ejs') %>
+        </div>
+    </body>
 
-<body>
-    <%- include('../partials/header.ejs') %>
-        <h1>Edit Skill</h1>
-        <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
-            <label for="skill">Skill:
-                <input type="text" name="skill" value="<%= skill.skill %>">
-            </label>
-            <label for="level">Level:
-                <input type="number" name="level" value="<%= skill.level %> ">
-            </label>
-            <label for="description">Description:
-                <input type="text" name="description" value="<%= skill.description %> ">
-            </label>
-            <label for="mastered">Mastered:
-                <input type="checkbox" name="done" <%=skill.done ? 'checked' : '' %>>
-            </label>
-            <button type="submit">Update Skill</button>
-        </form>
-        <%- include('../partials/footer.ejs') %>
-</body>
-
-</html>
+    </html>

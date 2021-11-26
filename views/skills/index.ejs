@@ -1,46 +1,44 @@
-<head>
-    <%- include('../partials/head.ejs') %>
+<%- include('../partials/head.ejs') %>
 
-        <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
 
-<body>
-    <%- include('../partials/header.ejs') %>
-        <br>
-        <h1>My Current Developer Skills
-        </h1>
-        <h3>as of
-            <%= date %>
-        </h3>
-        <p id="desc">Click a skill to see the description.</p>
-        <div class="row">
-            <table class="table table-bordered">
-                <thead class="head">
-                    <tr>
-                        <th class="head">Skill</th>
-                        <th class="head">Current Level</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% skills.forEach(function(skill) { %>
-                        <tr>
-                            <td id="skill">
-                                <a href="/skills/ 
-                <%= skill.id %>">
-                                    <%= skill.skill %>
-                                </a>
-                            </td>
-                            <td id="level">
-                                <%= skill.level %>
-                            </td>
-                        </tr>
-                        <% }); %>
-                </tbody>
-            </table>
+    <body>
+        <div class="container">
+            <%- include('../partials/header.ejs') %>
+                <br>
+                <h1>My Current Developer Skills
+                </h1>
+                <h3>as of
+                    <%= date %>
+                </h3>
+                <h6 class="text-center text-muted">Click a skill to see the description.</h6>
+                <div class="table=responsive">
+                    <table class="table table-sm">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Skill</th>
+                                <th scope="col">Current Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% skills.forEach(function(skill) { %>
+                                <tr class="table-info">
+                                    <td id="skill">
+                                        <a href="/skills/ <%= skill.id %>">
+                                            <%= skill.skill %>
+                                        </a>
+                                    </td>
+                                    <td class="bg-success" id="level">
+                                        <%= skill.level %>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+                <a href="/skills/new">Add Skill</a>
+                <br>
+                <%- include('../partials/footer.ejs') %>
         </div>
-        <a href="/skills/new">Add Skill</a>
-        <br>
-        <%- include('../partials/footer.ejs') %>
-</body>
+    </body>
 
-</html>
+    </html>

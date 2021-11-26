@@ -1,31 +1,10 @@
 body {
     padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
     color: #00B7FF;
     margin: 3px;
     padding: 3px;
-}
-
-.delete-form {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.delete-form button {
-    color: red;
-}
-
-li {
-    list-style: none;
-}
-
-.head {
-    border: 3px solid purple;
-}
-
-#desc {
-    text-align: center;
 }

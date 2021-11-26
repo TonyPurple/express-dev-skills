@@ -28,7 +28,7 @@ function deleteSkill(req, res) {
 }
 
 function create(req, res) {
-    req.body.done = false;
+    req.body.done = req.body.done === 'on';
     Skill.create(req.body);
     // Do a redirect anytime data is changed
     res.redirect('/skills');
@@ -49,6 +49,5 @@ function index(req, res) {
 function show(req, res) {
     res.render('skills/show', {
         skill: Skill.getOne(req.params.id),
-        // skillNum: Skill.getAll().findIndex(skill => skill.id === parseInt(req.params.id)) + 1
     });
 }
