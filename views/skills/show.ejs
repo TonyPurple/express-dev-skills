@@ -1,29 +1,26 @@
 <%- include('../partials/head.ejs') %>
 
-    <body>
-        <div class="container">
-            <br>
-            <form action="/skills/<%= skill.id %>?_method=DELETE" class="delete-form" method="POST">
-                <button type="submit" class="btn btn-danger">X</button>
-            </form>
-            <br>
-            <h1>Skill #
-                <%= skill.id %>
-            </h1>
-            <br>
-            <h3>
-                <%= skill.skill %> : Level
-                    <%= skill.level %>
-            </h3>
-            <p>
-                <%= skill.description%>
-            </p>
-            <br>
-            <h3>Project Completed:
-                <%= skill.done ? 'Yes' : 'No' %>
-            </h3>
-            <br>
-            <a href="/skills/<%= skill.id %>/edit">Edit Skill</a>
-            <br>
-        </div>
-        <%- include('../partials/footer.ejs') %>
+    <br>
+    <form action="/skills/<%= skill.id %>?_method=DELETE" class="delete-form" method="POST">
+        <button type="submit" class="btn btn-danger">X</button>
+    </form>
+    <br>
+    <h1>Skill #
+        <%= skill.id %>
+    </h1>
+    <br>
+    <h3>
+        <%= skill.skill %> : Level
+            <%= skill.level %>
+    </h3>
+    <p>
+        <%= skill.description%>
+    </p>
+    <br>
+    <h3>Project Completed:
+        <%= skill.done ? 'Yes' : 'No' %>
+    </h3>
+    <br>
+    <a href="/skills/<%= skill.id %>/edit">Edit Skill</a>
+    <br>
+    <%- include('../partials/footer.ejs') %>
